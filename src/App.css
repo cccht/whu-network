@@ -1,0 +1,73 @@
+#root {
+  padding: 2rem;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+/* Chrome, Edge 和 Safari */
+::-webkit-scrollbar {
+  width: 12px; /* 滚动条的宽度 */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* 滚动条的颜色 */
+  border-radius: 10px; /* 圆角效果 */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* 悬停时的颜色 */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* 滚动条轨道的颜色 */
+  border-radius: 10px; /* 圆角效果 */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin; /* 窄滚动条 */
+  scrollbar-color: #888 #f1f1f1; /* 滚动条颜色和轨道颜色 */
+}
+
+/* 在 Firefox 中模拟圆角效果 */
+.scroll-container {
+  border-radius: 10px; /* 给容器加圆角 */
+  overflow: hidden; /* 隐藏边缘的部分 */
+}
+
+.scroll-container::-webkit-scrollbar {
+  border-radius: 10px; /* 圆角效果 */
+}
