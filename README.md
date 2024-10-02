@@ -1,8 +1,18 @@
-# React + Vite
+# 武汉大学校园网客户端
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 编写目的
+1. 能够实现自动登录校园网（why？[参考此链接，选择运营商重新登录延迟会低](https://www.bilibili.com/video/BV1EA4y1S7FX/?spm_id_from=333.337.search-card.all.click&vd_source=9937b48402bb97b802fd41026d320a05)）
+2. 能够隔几分钟检测一次网络状态，若掉线则自动登录
+3. 更美观~
 
-Currently, two official plugins are available:
+## 实现途径
+1. 利用node的http模块，模拟登录（具体细节可自行阅读代码）
+2. 利用node的react和electron构建桌面应用（遭遇了很多打包问题，现已能够使用）
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 目前存在的问题
+1. 打包的软件很大，有很大优化空间
+2. 登录后的信息没进行处理，相应的功能没有做
+3. 网络检测功能不完整，掉线自动登录需要优化
+4. 等等~
+
+ 
