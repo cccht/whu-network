@@ -242,6 +242,7 @@ ipcMain.handle('get_info', async (event, ip, port) => {
         return { success: false, message: '发生错误：' + error.message };
     }
 });
+
 // 定义下线功能的处理器
 ipcMain.handle('logout_user', async (event, ip, port) => {
     const logoutUrl = `http://${ip}:${port}/eportal/InterFace.do?method=logout`;
@@ -271,7 +272,9 @@ ipcMain.handle('check-network', async () => {
     const getIndexUrl = "http://www.bilibili.com/"; // 确保使用 HTTPS
     // Cannot read properties of undefined (reading 'connected')
     try {
-        const response = await axios.get(getIndexUrl);
+        const response = await axios.get(getIndexUrl, {
+            proxy: false // 禁用代理
+        });
 
         // 处理重定向
         // if (response.status === 301 || response.status === 302) {
